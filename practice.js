@@ -1,19 +1,19 @@
 //We're in a job interview. Answer the following questions (try to not look at your notes unless you have to).
   // 1) What is the purpose of the 'this keyword'?
 
-      //Answer
+      //Answer: It is a tool to limit how much you repeat yourself and thus reduce your amount of code. It allows you to make elements of a object tranferable.
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
-      //Answer
-
+      //Answer: explicit; implicit: the calling object is left of the dot; default/window: this happens when the function has been called without any object before the window.
+            // new: this attaches the this functionality to a new variable. 
   // 3) What is the difference between call and apply?
 
-      //Answer
+      //Answer: call expects parameters in parethesis, whereas apply expects an array.
 
   // 4) What does .bind do?
 
-      //Answer
+      //Answer: it attaches a this to a function/object, and holds it in waiting to be called later. 
 
 
 //Next Problem
@@ -24,14 +24,33 @@
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
     //Code Here
+var user = {
+  username: "John",
+  email: "john@doe.com",
+  getUsername:function(){
+    return(this.username);
+  }
+}
+
 
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
-
+user.getUsername();
 
 //Next Problem
 
+// ** WHEN IT IS A NORMAL OBJECT THE KEY AND VALUE ARE LINKED WITH  :  
+// ** WHEN IT IS A CONSTRUCTER FUNCTION THE KEY AND VALUE ARE LINKED WITH  =
 
 // Write the function definitions which will make the following function invocations function properly.
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.moveCar = function() {
+    
+  }
+
+}
 
   //Function Invocations Here
 
